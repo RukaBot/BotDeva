@@ -11,7 +11,7 @@ const axios = require("axios");
 const menu = require("./lib/menu.js");
 const tambahan = require("./lib/tambahan.js")
 const donasi = require("./lib/donasi.js");
-const info = require("./lib/info.js");
+// const info = require("./lib/info.js");
 /////////////////
 const BotName = 'DevaBot'; 
 const instagram = 'https://www.instagram.com/deva_naufal/'; 
@@ -381,7 +381,7 @@ conn.sendMessage(id, 'ulangi dengan pict; cewek/cowok\n\nMisal: pict cowok;' ,Me
    {
       let caption = imageMessage.caption.toLocaleLowerCase()
       const buffer = await conn.downloadMediaMessage(m) // to decrypt & use as a buffer
-      if (caption == '!sticker')
+      if (caption == 'sticker;')
       {
          const stiker = await conn.downloadAndSaveMediaMessage(m) // to decrypt & save to file
 
